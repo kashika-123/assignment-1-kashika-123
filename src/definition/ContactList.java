@@ -25,6 +25,7 @@ public class ContactList implements contactADT {
             while (temp.getNext() != null) {
                 temp = temp.getNext();
             }
+            temp.setNext(node);
         }
 
     }
