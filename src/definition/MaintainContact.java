@@ -2,6 +2,7 @@ package definition;
 
 import helper.Person;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MaintainContact {
@@ -15,6 +16,7 @@ public class MaintainContact {
         person.setFirstName(sc.nextLine());
         System.out.print("Last Name:");
         person.setLastName(sc.nextLine());
+        ArrayList<String> number = new ArrayList<>();
 
         return person;
 
