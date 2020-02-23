@@ -40,6 +40,11 @@ public class ContactList implements contactADT {
     public void search(String firstName) {
         Node<Person> temp = head;
         int count = 0;
+        while (temp != null) {
+            if (temp.getData().getFirstName().equals(firstName))
+                count++;
+            temp = temp.getNext();
+        }
 
     }
 
