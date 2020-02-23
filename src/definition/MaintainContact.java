@@ -17,7 +17,13 @@ public class MaintainContact {
         System.out.print("Last Name:");
         person.setLastName(sc.nextLine());
         ArrayList<String> number = new ArrayList<>();
-
+        while (true) {
+            System.out.print("Number:");
+            number.add(sc.nextLine());
+            System.out.println("continue(y/n)");
+            if (sc.nextLine().equals("n"))
+                break;
+        }
         return person;
 
     }
