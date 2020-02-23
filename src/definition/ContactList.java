@@ -32,6 +32,8 @@ public class ContactList implements contactADT {
 
     @Override
     public void remove() {
+        Node response = null;
+
 
 
     }
