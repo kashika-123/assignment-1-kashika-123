@@ -5,4 +5,6 @@ public interface contactADT<Person> {
 
     public void remove();
 
+    public void search(String firstName);
+
 }
