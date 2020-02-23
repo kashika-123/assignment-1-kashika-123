@@ -53,8 +53,15 @@ public class ContactList implements contactADT {
         System.out.println("Here are all your contacts: ");
         Node<Person> temp = head;
         int i = 1;
-        return 0;
+        while (temp != null) {
+            System.out.println(i++ + ". " + temp.getData().getFirstName() + " " + temp.getData().getLastName());
+            temp = temp.getNext();
+        }
+        System.out.print("Press the number against the contact to delete it:");
+        return sc.nextInt();
     }
+
+
 
     @Override
     public void search(String firstName) {
