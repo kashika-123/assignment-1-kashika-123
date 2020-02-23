@@ -1,5 +1,5 @@
 package helper;
 
-public class Node {
+public class Node<Person> {
 
 }
