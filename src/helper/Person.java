@@ -5,6 +5,19 @@ import java.util.ArrayList;
 public class Person {
     private String firstName;
     private String lastName;
+    private ArrayList<String> number;
+    private String email;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", number=" + number +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -37,9 +50,6 @@ public class Person {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    private ArrayList<String> number;
-    private String email;
 
 
 }
