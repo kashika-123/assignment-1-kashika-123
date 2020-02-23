@@ -17,6 +17,7 @@ public class ContactList implements contactADT {
 
     @Override
     public void add(Object data) {
+        Node node = new Node(data);
 
     }
 
