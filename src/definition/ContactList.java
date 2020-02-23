@@ -116,7 +116,11 @@ public class ContactList implements contactADT {
             System.out.println("-----*-----*-----*-----" + "\n" + "-----*-----*-----*-----");
         }
         System.out.println();
+    }
 
+    public void sortList() {
 
     }
+
+
 }
