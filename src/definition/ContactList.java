@@ -119,7 +119,8 @@ public class ContactList implements contactADT {
     }
 
     public void sortList() {
-
+        //Node current will point to head
+        Node<Person> current = head, index = null;
     }
 
 
