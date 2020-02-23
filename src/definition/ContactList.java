@@ -22,6 +22,9 @@ public class ContactList implements contactADT {
             head = node;
         } else {
             Node temp = head;
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
         }
 
     }
