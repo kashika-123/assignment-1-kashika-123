@@ -1,6 +1,11 @@
 package helper;
 
 public class Node<Person> {
+    public Node(Person data) {
+        this.data = data;
+        next = null;
+    }
+
     private Person data;
     private Node<Person> next;
 
