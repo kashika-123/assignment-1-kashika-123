@@ -8,4 +8,7 @@ public class MaintainContact {
     Person person = new Person();
     Scanner sc = new Scanner(System.in);
 
+    public Person add() {
+        return person;
+    }
 }
