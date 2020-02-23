@@ -10,7 +10,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ContactList contact = new ContactList();
         while (true) {
-            MaintainContact maintainContact = new maintainContact();
+            MaintainContact maintainContact = new MaintainContact();
 
             System.out.println("Welcome to DBC's Contact List App\n" +
                     "Press 1 to add a new contact\n" +
@@ -18,6 +18,27 @@ public class Main {
                     "Press 3 to search for a contact\n" +
                     "Press 4 to delete a contact\n" +
                     "Press 5 to exit program ");
+            int choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice) {
+                case 1:
+                    contact.add(maintainContact.add());
+                    break;
+                case 2:
+                    contact.sortList();
+                    contact.print();
+                    break;
+                case 3:
+                    System.out.println("You could search for a contact from their first names:");
+                    String firstName = sc.nextLine();
+                    contact.search(firstName);
+                    break;
+                case 4:
+                    contact.remove();
+                    break;
+                case 5:
+                    break;
+            }
         }
     }
 }
