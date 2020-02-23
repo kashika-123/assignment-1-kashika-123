@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Person {
     private String firstName;
     private String lastName;
-    private ArrayList<String> number;
+    private ArrayList<String> contactNumber;
     private String email;
 
     @Override
@@ -13,7 +13,7 @@ public class Person {
         return "Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", number=" + number +
+                ", number=" + contactNumber +
                 ", email='" + email + '\'' +
                 '}';
     }
@@ -36,11 +36,11 @@ public class Person {
     }
 
     public ArrayList<String> getNumber() {
-        return number;
+        return contactNumber;
     }
 
-    public void setNumber(ArrayList<String> number) {
-        this.number = number;
+    public void setContactNumber(ArrayList<String> contactNumber) {
+        this.contactNumber = contactNumber;
     }
 
     public String getEmail() {

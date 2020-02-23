@@ -24,6 +24,9 @@ public class MaintainContact {
             if (sc.nextLine().equals("n"))
                 break;
         }
+        person.setContactNumber(number);
+        System.out.print("Email:");
+        person.setEmail(sc.nextLine());
         return person;
 
     }
