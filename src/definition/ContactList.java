@@ -49,18 +49,28 @@ public class ContactList implements contactADT {
             System.out.println(count + "match found!\n-----*-----*-----*-----");
             temp = head;
             while (temp != null) {
-                if (temp.getData().getFirstName().equals(firstName))
+                if (temp.getData().getFirstName().equals(firstName)) {
                     System.out.println(temp.getData());
-                {
+
                     System.out.println("-----*-----*-----*-----");
+
+                    temp = temp.getNext();
+                } else {
+                    System.out.println("No result found.");
                 }
-                temp = temp.getNext();
+
             }
         }
+
+
     }
 
     @Override
     public void print() {
+        System.out.println("---Here are all your contacts---\n" +
+                "-------- * -------- * -------- * --------");
+        Node temp = head;
+
 
     }
 }
