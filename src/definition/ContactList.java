@@ -20,6 +20,8 @@ public class ContactList implements contactADT {
         Node node = new Node(data);
         if (head == null) {
             head = node;
+        } else {
+            Node temp = head;
         }
 
     }
