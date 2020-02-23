@@ -47,8 +47,16 @@ public class ContactList implements contactADT {
         }
         if (count != 0) {
             System.out.println(count + "match found!\n-----*-----*-----*-----");
+            temp = head;
+            while (temp != null) {
+                if (temp.getData().getFirstName().equals(firstName))
+                    System.out.println(temp.getData());
+                {
+                    System.out.println("-----*-----*-----*-----");
+                }
+                temp = temp.getNext();
+            }
         }
-
     }
 
     @Override
