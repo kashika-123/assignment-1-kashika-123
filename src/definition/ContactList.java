@@ -33,7 +33,12 @@ public class ContactList implements contactADT {
     @Override
     public void remove() {
         Node response = null;
+        while (head != null) {
+            Node<Person> temp = head;
+            Node previous = null;
+            int count = 0;
 
+        }
 
 
     }
