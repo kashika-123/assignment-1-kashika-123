@@ -45,6 +45,9 @@ public class ContactList implements contactADT {
                 count++;
             temp = temp.getNext();
         }
+        if (count != 0) {
+            System.out.println(count + "match found!\n-----*-----*-----*-----");
+        }
 
     }
 
