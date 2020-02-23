@@ -4,7 +4,10 @@ import adt.contactADT;
 import helper.Node;
 import helper.Person;
 
+import java.util.Scanner;
+
 public class ContactList implements contactADT {
+    Scanner sc = new Scanner(System.in);
     Node<Person> head;
 
     public ContactList() {
@@ -38,6 +41,8 @@ public class ContactList implements contactADT {
             Node previous = null;
             int count = 0;
             int index = printName();
+            sc.nextLine();
+
 
         }
 
@@ -45,6 +50,9 @@ public class ContactList implements contactADT {
     }
 
     public int printName() {
+        System.out.println("Here are all your contacts: ");
+        Node<Person> temp = head;
+        int i = 1;
         return 0;
     }
 
