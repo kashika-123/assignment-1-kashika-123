@@ -1,8 +1,11 @@
 package definition;
 
 import adt.contactADT;
+import helper.Node;
+import helper.Person;
 
 public class ContactList implements contactADT {
+    Node<Person> head;
 
     @Override
     public void add(Object data) {
