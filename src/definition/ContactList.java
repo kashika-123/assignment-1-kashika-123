@@ -7,6 +7,10 @@ import helper.Person;
 public class ContactList implements contactADT {
     Node<Person> head;
 
+    public ContactList() {
+        head = null;
+    }
+
     @Override
     public void add(Object data) {
 
