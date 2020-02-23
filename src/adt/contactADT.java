@@ -7,4 +7,6 @@ public interface contactADT<Person> {
 
     public void search(String firstName);
 
+    public void print();
+
 }
