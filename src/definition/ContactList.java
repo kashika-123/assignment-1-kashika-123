@@ -33,10 +33,13 @@ public class ContactList implements contactADT {
     @Override
     public void remove() {
 
+
     }
 
     @Override
     public void search(String firstName) {
+        Node<Person> temp = head;
+        int count = 0;
 
     }
 
