@@ -11,6 +11,10 @@ public class ContactList implements contactADT {
         head = null;
     }
 
+    public Node getHead() {
+        return head;
+    }
+
     @Override
     public void add(Object data) {
 
