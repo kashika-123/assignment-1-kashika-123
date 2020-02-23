@@ -37,10 +37,15 @@ public class ContactList implements contactADT {
             Node<Person> temp = head;
             Node previous = null;
             int count = 0;
+            int index = printName();
 
         }
 
 
+    }
+
+    public int printName() {
+        return 0;
     }
 
     @Override
