@@ -42,8 +42,21 @@ public class ContactList implements contactADT {
             int count = 0;
             int index = printName();
             sc.nextLine();
+            while (count < index - 1) {
+                previous = temp;
+                temp = temp.getNext();
+                count++;
+            }
+            System.out.println(temp.getData().getFirstName() + " " + temp.getData().getLastName() + "'s contact deleted from list!");
 
+            if (previous != null) {
+                response = previous.getNext();
+                previous.setNext(null);
 
+            } else {
+                response = head;
+                head = null;
+            }
         }
 
 
