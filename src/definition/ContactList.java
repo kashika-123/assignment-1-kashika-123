@@ -49,9 +49,10 @@ public class ContactList implements contactADT {
             temp.setNext(temp.getNext().getNext());
 
         }
+        System.out.println(temp.getData().getFirstName() + " " + temp.getData().getLastName() + "'s contact deleted from list!");
 
 
-        }
+    }
 
     public int printName() {
         System.out.println("---Here are all your contacts---");
