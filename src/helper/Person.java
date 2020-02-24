@@ -8,16 +8,13 @@ public class Person {
     private ArrayList<String> contactNumber;
     private String email;
 
+
     @Override
     public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", number=" + contactNumber +
-                ", email='" + email + '\'' +
-                '}';
+        return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                "Contact Number: \n" + contactNumber +
+                "Email Address: " + email;
     }
-
 
     public String getFirstName() {
         return firstName;

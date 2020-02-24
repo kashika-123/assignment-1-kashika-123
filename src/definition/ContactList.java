@@ -63,11 +63,11 @@ public class ContactList implements contactADT {
     }
 
     public int printName() {
-        System.out.println("Here are all your contacts: ");
+        System.out.println("---Here are all your contacts---");
         Node<Person> temp = head;
-        int i = 1;
+        int sNo = 1;
         while (temp != null) {
-            System.out.println(i++ + ". " + temp.getData().getFirstName() + " " + temp.getData().getLastName());
+            System.out.println(sNo++ + ". " + temp.getData().getFirstName() + " " + temp.getData().getLastName());
             temp = temp.getNext();
         }
         System.out.print("Press the number against the contact to delete it:");
@@ -86,24 +86,21 @@ public class ContactList implements contactADT {
             temp = temp.getNext();
         }
         if (count != 0) {
-            System.out.println(count + "match found!\n-----*-----*-----*-----");
+            System.out.println(count + " " + "match found!\n-----*-----*-----*-----");
             temp = head;
             while (temp != null) {
                 if (temp.getData().getFirstName().equals(firstName)) {
                     System.out.println(temp.getData());
 
                     System.out.println("-----*-----*-----*-----");
-
-                    temp = temp.getNext();
-                } else {
+                }
+                temp = temp.getNext();
+            }
+        } else {
                     System.out.println("No result found.");
                 }
-
-            }
-        }
-
-
     }
+
 
     @Override
     public void print() {
@@ -113,7 +110,7 @@ public class ContactList implements contactADT {
         while (temp != null) {
             System.out.println(temp.getData());
             temp = temp.getNext();
-            System.out.println("-----*-----*-----*-----" + "\n" + "-----*-----*-----*-----");
+            System.out.println("-------- * -------- * -------- * --------\n-------- * -------- * -------- * --------");
         }
         System.out.println();
     }
@@ -122,10 +119,8 @@ public class ContactList implements contactADT {
         //Node current will point to head
         Node<Person> current = head, index = null;
         Person temp;
-        if (head == null) {
-            return;
-        } else {
-            while (current != null) {
+
+        while (current != null) {
                 //Node index will point to node next to current
                 index = current.getNext();
 
@@ -141,7 +136,7 @@ public class ContactList implements contactADT {
                 current = current.getNext();
             }
 
-        }
+
     }
 
 }

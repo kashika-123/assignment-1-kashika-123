@@ -12,7 +12,7 @@ public class Main {
         while (true) {
             MaintainContact maintainContact = new MaintainContact();
 
-            System.out.println("Welcome to DBC's Contact List App\n" +
+            System.out.println("Welcome to Kashika's Contact List App\n" +
                     "Press 1 to add a new contact\n" +
                     "Press 2 to view all contacts\n" +
                     "Press 3 to search for a contact\n" +
@@ -37,6 +37,14 @@ public class Main {
                     contact.remove();
                     break;
                 case 5:
+                    break;
+            }
+            if (choice == 5) {
+                break;
+            } else {
+                System.out.println("continue?(y/n)");
+                String c = sc.nextLine();
+                if (c.equals("n"))
                     break;
             }
         }

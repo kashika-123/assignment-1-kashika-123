@@ -18,15 +18,21 @@ public class MaintainContact {
         person.setLastName(sc.nextLine());
         ArrayList<String> number = new ArrayList<>();
         while (true) {
-            System.out.print("Number:");
+            System.out.print("Contact Number:");
             number.add(sc.nextLine());
-            System.out.println("continue(y/n)");
+            System.out.print("Would you like to add another contact number? (y/n):");
             if (sc.nextLine().equals("n"))
                 break;
         }
         person.setContactNumber(number);
-        System.out.print("Email:");
-        person.setEmail(sc.nextLine());
+        while (true) {
+            System.out.print("Would you like to add email address? (y/n):");
+            if (sc.nextLine().equals("n"))
+                break;
+            System.out.print("Email Address:");
+            person.setEmail(sc.nextLine());
+            break;
+        }
         return person;
 
     }
