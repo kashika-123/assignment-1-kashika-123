@@ -1,24 +1,21 @@
 package helper;
 
-import java.util.ArrayList;
-
 public class Person {
     private String firstName;
     private String lastName;
-    private ArrayList<String> contactNumber;
+    private StringBuffer contactNumber;
     private String email;
-
 
 
     @Override
     public String toString() {
         if (email != null) {
             return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
-                    "Contact Number: " + contactNumber + "\n" +
+                    "Contact Number: " + "" + "\n" +
                     "Email Address: " + email;
         } else {
             return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
-                    "Contact Number: " + contactNumber;
+                    "Contact Number: ";
 
         }
 
@@ -41,11 +38,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public ArrayList<String> getNumber() {
+    public StringBuffer getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(ArrayList<String> contactNumber) {
+    public void setContactNumber(StringBuffer contactNumber) {
         this.contactNumber = contactNumber;
     }
 
