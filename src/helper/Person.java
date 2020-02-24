@@ -9,12 +9,21 @@ public class Person {
     private String email;
 
 
+
     @Override
     public String toString() {
-        return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
-                "Contact Number: \n" + contactNumber +
-                "Email Address: " + email;
+        if (email != null) {
+            return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                    "Contact Number: " + contactNumber + "\n" +
+                    "Email Address: " + email;
+        } else {
+            return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                    "Contact Number: " + contactNumber;
+
+        }
+
     }
+
 
     public String getFirstName() {
         return firstName;

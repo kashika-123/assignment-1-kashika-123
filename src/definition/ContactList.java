@@ -35,39 +35,18 @@ public class ContactList implements contactADT {
 
     @Override
     public void remove() {
-        Node response = null;
-        while (head != null) {
-            Node<Person> temp = head;
-            Node previous = null;
-            int count = 0;
-            int index = printName();
-            sc.nextLine();
-            while (count < index - 1) {
-                previous = temp;
-                temp = temp.getNext();
-                count++;
-            }
-            System.out.println(temp.getData().getFirstName() + " " + temp.getData().getLastName() + "'s contact deleted from list!");
+        Node<Person> deletedNode;
+        Node<Person> temp = getHead();
 
-            if (previous != null) {
-                response = previous.getNext();
-                previous.setNext(null);
 
-            } else {
-                response = head;
-                head = null;
-            }
         }
-
-
-    }
 
     public int printName() {
         System.out.println("---Here are all your contacts---");
         Node<Person> temp = head;
-        int sNo = 1;
+        int i = 1;
         while (temp != null) {
-            System.out.println(sNo++ + ". " + temp.getData().getFirstName() + " " + temp.getData().getLastName());
+            System.out.println(i++ + ". " + temp.getData().getFirstName() + " " + temp.getData().getLastName());
             temp = temp.getNext();
         }
         System.out.print("Press the number against the contact to delete it:");
@@ -138,5 +117,6 @@ public class ContactList implements contactADT {
 
 
     }
+
 
 }

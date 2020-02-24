@@ -36,4 +36,8 @@ public class MaintainContact {
         return person;
 
     }
+
+    public void remove() {
+
+    }
 }
