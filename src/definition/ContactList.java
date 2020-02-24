@@ -45,6 +45,8 @@ public class ContactList implements contactADT {
             for (int j = 1; j < i - 1; j++) {
                 temp = temp.getNext();
             }
+            deletedNode = temp.getNext();
+            temp.setNext(temp.getNext().getNext());
 
         }
 
