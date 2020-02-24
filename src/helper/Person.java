@@ -1,24 +1,41 @@
 package helper;
 
+import java.util.ArrayList;
+
 public class Person {
     private String firstName;
     private String lastName;
-    private StringBuffer contactNumber;
+    private ArrayList<String> contactNumber;
     private String email;
 
+    public void getNumber() {
+
+    }
 
     @Override
     public String toString() {
-        if (email != null) {
-            return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
-                    "Contact Number: " + "" + "\n" +
-                    "Email Address: " + email;
+        if (email != "") {
+            if (contactNumber.size() > 1) {
+                return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                        "Contact Number(s): " + getContactNumber() + "\n" +
+                        "Email Address: " + email;
+            } else if (contactNumber.size() == 1) {
+                return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                        "Contact Number: " + getContactNumber() + "\n" + "Email Address: " + email;
+            }
+
         } else {
-            return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
-                    "Contact Number: ";
+            if (contactNumber.size() == 1) {
+                return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                        "Contact Number: " + getContactNumber() + "\n" + "Email Address: " + email;
+            } else if (contactNumber.size() > 1) {
+                return "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" +
+                        "Contact Number(s): " + getContactNumber() + "\n" +
+                        "Email Address: " + email;
 
+            }
         }
-
+        return null;
     }
 
 
@@ -38,11 +55,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public StringBuffer getContactNumber() {
+    public ArrayList<String> getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(StringBuffer contactNumber) {
+    public void setContactNumber(ArrayList<String> contactNumber) {
         this.contactNumber = contactNumber;
     }
 

@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class ContactList implements contactADT {
     Scanner sc = new Scanner(System.in);
     Node<Person> head;
+    int size = 0;
 
     public ContactList() {
         head = null;
@@ -30,27 +31,33 @@ public class ContactList implements contactADT {
             }
             temp.setNext(node);
         }
+        size++;
 
     }
 
+
     @Override
     public void remove() {
-        Node<Person> deletedNode;
-        Node<Person> temp = getHead();
-        int i = printName();
-        if (i == 1) {
-            deletedNode = getHead();
-            head.setNext(null);
+        Node<Person> temp = head;
+        Node previous = null;
+        int item = printName();
+        if (item == 1) {
+            System.out.println(temp.getData().getFirstName() + " " + temp.getData().getLastName() + "'s contact deleted from list!");
+            head = temp.getNext();
+            temp = head;
         } else {
-            for (int j = 1; j < i - 1; j++) {
+            for (int i = 1; i <= size; i++) {
+                if (i == item) {
+                    System.out.println(temp.getData().getFirstName() + " " + temp.getData().getLastName() + "'s contact deleted from list!");
+                    previous.setNext(temp.getNext());
+                    size--;
+                    break;
+                }
+                previous = temp;
                 temp = temp.getNext();
+
             }
-            deletedNode = temp.getNext();
-            temp.setNext(temp.getNext().getNext());
-
         }
-        System.out.println(temp.getData().getFirstName() + " " + temp.getData().getLastName() + "'s contact deleted from list!");
-
 
     }
 
