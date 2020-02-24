@@ -37,6 +37,11 @@ public class ContactList implements contactADT {
     public void remove() {
         Node<Person> deletedNode;
         Node<Person> temp = getHead();
+        int i = printName();
+        if (i == 1) {
+            deletedNode = getHead();
+            head.setNext(null);
+        }
 
 
         }
